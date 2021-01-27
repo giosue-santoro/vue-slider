@@ -13,6 +13,7 @@ var app = new Vue({
     },
 
     methods:  {
+        //Se index minore di 4 aumenta di uno l'indice, quando va sopra 4 torna al primo elemento
         next: function (){
             if (this.immaginiIndex < 4) {
                 this.immaginiIndex += 1;
@@ -20,6 +21,7 @@ var app = new Vue({
                 this.immaginiIndex = 0;
             }
         },
+        //Se index maggiore di 0 diminuisce di uno l'indice, quando va sotto lo 0 torna al quarto elemento
         prev: function (){
             if (this.immaginiIndex > 0) {
                 this.immaginiIndex -= 1;
@@ -27,7 +29,16 @@ var app = new Vue({
                 this.immaginiIndex = 4;
             }
         },
-        dotOnClick: function (i){
+        //Stampa la classe active nel pallino con indice selezionato colorandolo di blue
+        dotActive: function (i){
+            if (i === this.immaginiIndex) {
+                return 'fas fa-circle active';
+            } else {
+                return 'fas fa-circle';
+            }
+        },
+        //Cambia index dei pallini al click
+        dotClick: function (i){
             this.immaginiIndex = i;
         }
     }

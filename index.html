@@ -30,11 +30,17 @@
                 </div>
 
                 <div class="nav">
-                    <i :class="immaginiIndex === 0 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+
+                    <!-- Ciclo gli index delle immagini con Vue, dotActive mette classe active all'index selezionato, dotClick cambia l'index dei pallini quando vengono direttamente cliccati-->
+                    <i v-for="(element, i) in immagini" :class="dotActive(i)" @click="dotClick(i)"></i> 
+
+
+                    <!-- <i :class="immaginiIndex === 0 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
                     <i :class="immaginiIndex === 1 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
                     <i :class="immaginiIndex === 2 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
                     <i :class="immaginiIndex === 3 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
-                    <i :class="immaginiIndex === 4 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+                    <i :class="immaginiIndex === 4 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i> -->
+
                 </div>
 
             </div>
