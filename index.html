@@ -30,10 +30,11 @@
                 </div>
 
                 <div class="nav">
-                    <i class="fas fa-circle active first"></i>
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-circle last"></i>
+                    <i :class="immaginiIndex === 0 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+                    <i :class="immaginiIndex === 1 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+                    <i :class="immaginiIndex === 2 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+                    <i :class="immaginiIndex === 3 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
+                    <i :class="immaginiIndex === 4 ? 'fas fa-circle active' : 'fas fa-circle'" @click="dotOnClick"></i>
                 </div>
 
             </div>

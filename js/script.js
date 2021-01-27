@@ -13,11 +13,22 @@ var app = new Vue({
     },
 
     methods:  {
-        next: function() {
-            this.immaginiIndex += 1;
+        next: function (){
+            if (this.immaginiIndex < 4) {
+                this.immaginiIndex += 1;
+            } else {
+                this.immaginiIndex = 0;
+            }
         },
-        prev: function() {
-            this.immaginiIndex -= 1;
+        prev: function (){
+            if (this.immaginiIndex > 0) {
+                this.immaginiIndex -= 1;
+            } else {
+                this.immaginiIndex = 4;
+            }
+        },
+        dotOnClick: function (i){
+            this.immaginiIndex = i;
         }
     }
 })
